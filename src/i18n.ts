@@ -5,7 +5,6 @@ import i18nextMiddleware from "i18next-http-middleware";
 import path from "path";
 
 async function initializeI18n(app: express.Application) {
-  console.log(path.join(__dirname, "locales"));
   await i18next
     .use(i18nextMiddleware.LanguageDetector)
     .use(Backend)
